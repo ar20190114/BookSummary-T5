@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Read Book</title>
+    </head>
+
+    <body>
+        <h2>読書感想文　楽ちんアプリ</h2>
+        <h1>１日だけ頑張るか、、、</h1>
+        <p>
+            １日だけ頑張るか、、、は、入力された小説を要約アプリです。
+            <br>
+            読書感想文に書きたい小説を入力してみましょう。
+        </p>
+        <form action="{% url 'pytorchapp:upload' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+    </body>
+</html>
